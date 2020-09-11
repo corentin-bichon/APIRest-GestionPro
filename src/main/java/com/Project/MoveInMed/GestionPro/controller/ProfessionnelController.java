@@ -29,9 +29,29 @@ public class ProfessionnelController {
 	}
 
 	@GetMapping("/professionnels/{id}")
-	public Professionnel ReadPro(@PathVariable String id){
+	public Professionnel ReadProById(@PathVariable String id){
 		return repository.getByID(id);
 
+	}
+
+	@GetMapping("/professionnels/name/{nom}")
+	public List<Professionnel> ReadProByName(@PathVariable String nom){
+		List<Professionnel> professionnels =new ArrayList<>();
+		repository.getByName(nom).forEach(professionnels::add);
+		return professionnels;
+	}
+
+	@GetMapping("/professionnels/job/{profession}")
+	public List<Professionnel> ReadProByJob(@PathVariable String profession){
+		List<Professionnel> professionnels =new ArrayList<>();
+		repository.getByJob(profession).forEach(professionnels::add);
+		return professionnels;
+	}
+
+	@DeleteMapping("/professionnels/{id}")
+	public void DeleteById(@PathVariable String id){
+		List<Professionnel> professionnels =new ArrayList<>();
+		repository.Delete(id);
 	}
 
 
@@ -40,4 +60,23 @@ public class ProfessionnelController {
 		return repository.Update(professionnel, id);
 	}
 
+
+	//TODO Enum (pour amélioration)
+	@GetMapping("/professionnels/sort/{choix}")
+	public List<Professionnel> SortBy(@PathVariable String choix){
+		switch(choix) {
+			case "name" : choix="PRO_NAME";
+			break;
+			case "firstname" : choix="PRO_FIRSTNAME" ;
+			break;
+			case "profession" : choix="PRO_JOB" ;
+			break;
+
+			default: choix="PRO_ID" ;
+		}
+
+		List<Professionnel> professionnels =new ArrayList<>();
+		repository.Sort(choix).forEach(professionnels::add);
+		return professionnels;
+	}
 }
