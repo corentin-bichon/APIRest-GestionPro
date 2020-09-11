@@ -8,15 +8,15 @@ import javax.persistence.Id;
 @Entity
 public class Professionnel {
 
-    public Professionnel(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.Name = lastName;
-    }
 
-    public Professionnel(Long id, String firstName, String lastName) {
+    public Professionnel(Long id, String name,String firstName, String email, String numTel, String adresse, String profession) {
         this.id = id;
         this.firstName = firstName;
-        this.Name = lastName;
+        Name = name;
+        this.email = email;
+        this.numTel = numTel;
+        this.adresse = adresse;
+        this.profession = profession;
     }
 
     public Professionnel() {

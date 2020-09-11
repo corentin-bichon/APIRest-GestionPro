@@ -29,9 +29,29 @@ public class ProfessionnelController {
 	}
 
 	@GetMapping("/professionnels/{id}")
-	public Professionnel ReadPro(@PathVariable String id){
+	public Professionnel ReadProById(@PathVariable String id){
 		return repository.getByID(id);
 
+	}
+
+	@GetMapping("/professionnels/name/{nom}")
+	public List<Professionnel> ReadProByName(@PathVariable String nom){
+		List<Professionnel> professionnels =new ArrayList<>();
+		repository.getByName(nom).forEach(professionnels::add);
+		return professionnels;
+	}
+
+	@GetMapping("/professionnels/job/{profession}")
+	public List<Professionnel> ReadProByJob(@PathVariable String profession){
+		List<Professionnel> professionnels =new ArrayList<>();
+		repository.getByJob(profession).forEach(professionnels::add);
+		return professionnels;
+	}
+
+	@DeleteMapping("/professionnels/{id}")
+	public void DeleteByName(@PathVariable String id){
+		List<Professionnel> professionnels =new ArrayList<>();
+		repository.Delete(id);
 	}
 
 
