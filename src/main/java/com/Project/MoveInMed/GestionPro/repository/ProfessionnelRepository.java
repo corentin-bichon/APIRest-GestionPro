@@ -13,5 +13,8 @@ public interface ProfessionnelRepository  {
     List<Professionnel> list();
     Professionnel Update(Professionnel professionnel, String number);
     void Delete(String name);
+    List<Professionnel> Sort(String name);
+
+
 
 }

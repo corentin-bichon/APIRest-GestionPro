@@ -8,11 +8,10 @@ import javax.persistence.Id;
 @Entity
 public class Professionnel {
 
-
     public Professionnel(Long id, String name,String firstName, String email, String numTel, String adresse, String profession) {
         this.id = id;
         this.firstName = firstName;
-        Name = name;
+        this.Name = name;
         this.email = email;
         this.numTel = numTel;
         this.adresse = adresse;
@@ -21,6 +20,7 @@ public class Professionnel {
 
     public Professionnel() {
     }
+
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
