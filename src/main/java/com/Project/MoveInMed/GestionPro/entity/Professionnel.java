@@ -19,6 +19,8 @@ public class Professionnel {
         this.Name = lastName;
     }
 
+    public Professionnel() {
+    }
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
