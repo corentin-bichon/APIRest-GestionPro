@@ -113,7 +113,7 @@ public class ProfessionnelDatabase implements ProfessionnelRepository {
     @Override
     public List<Professionnel> Sort(String name) {
 
-        return jdbcTemplate.query("SELECT * FROM PRO ORDER BY " + name + "",
+        return jdbcTemplate.query("SELECT * FROM PRO ORDER BY " + name,
                 (rs, rowNum) -> new Professionnel(rs.getLong("PRO_ID"),
                         rs.getString("PRO_NAME"), rs.getString("PRO_FIRSTNAME"), rs.getString("PRO_EMAIL"), rs.getString("PRO_PHONE"), rs.getString("PRO_ADRESSE"), rs.getString("PRO_JOB")));
     }

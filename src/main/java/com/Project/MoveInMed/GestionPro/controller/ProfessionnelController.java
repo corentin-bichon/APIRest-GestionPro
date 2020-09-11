@@ -49,7 +49,7 @@ public class ProfessionnelController {
 	}
 
 	@DeleteMapping("/professionnels/{id}")
-	public void DeleteByName(@PathVariable String id){
+	public void DeleteById(@PathVariable String id){
 		List<Professionnel> professionnels =new ArrayList<>();
 		repository.Delete(id);
 	}
