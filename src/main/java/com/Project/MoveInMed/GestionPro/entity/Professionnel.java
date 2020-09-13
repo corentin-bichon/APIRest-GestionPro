@@ -5,6 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * Entity class for defined professionnel's informations who we need, mapped with the database table TBProfessionnel
+ */
 @Entity
 public class Professionnel {
 
@@ -20,7 +23,6 @@ public class Professionnel {
 
     public Professionnel() {
     }
-
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
