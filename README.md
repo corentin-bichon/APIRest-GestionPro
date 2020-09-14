@@ -1,6 +1,6 @@
 # APIRest-GestionPro
 <p>
-Api Rest with SpringBoot for manage professionnel informations
+Api Rest with SpringBoot for manage professional information
 
 
 For use swagger : http://localhost:8080/swagger-ui.html
@@ -23,20 +23,20 @@ Create Table and Insert default values
 <h6>
 USE DBProfessionnel;
 
-DROP TABLE IF EXISTS PRO;
+DROP TABLE IF EXISTS professional;
 
-CREATE table PRO (
-  PRO_ID BIGINT NOT NULL AUTO_INCREMENT,
-  PRO_NAME VARCHAR(50) NOT NULL,
-  PRO_FIRSTNAME VARCHAR(50) NOT NULL,
-  PRO_EMAIL VARCHAR(50) , 
-  PRO_ADRESSE VARCHAR(50),
-  PRO_PHONE VARCHAR(10), 
-  PRO_JOB VARCHAR(50),
-  PRIMARY KEY(PRO_ID)
+CREATE table professional (
+  id BIGINT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(50) NOT NULL,
+  firstname VARCHAR(50) NOT NULL,
+  email VARCHAR(50) , 
+  address VARCHAR(50),
+  phone VARCHAR(10), 
+  job VARCHAR(50),
+  PRIMARY KEY(id)
 ) ENGINE=InnoDB;
 
-INSERT INTO PRO (PRO_NAME,PRO_FIRSTNAME) VALUES
+INSERT INTO professional (name,firstname) VALUES
   ('John','RACHID'),
   ('Mike','TYSON'),
   ('Benny','BERTRAND');
