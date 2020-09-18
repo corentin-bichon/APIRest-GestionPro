@@ -35,7 +35,7 @@ public class ProfessionalDatabase implements ProfessionalRepository {
         jdbcTemplate.update(connection -> {
 
                     PreparedStatement ps = connection.prepareStatement(
-                            "INSERT INTO Professional(name, firstname, email , phone , job , address ) " +
+                            "INSERT INTO Professional(name, firstname, email , phone , profession , address ) " +
                                     "VALUES (?,?,?,?,?,?)",
                             Statement.RETURN_GENERATED_KEYS);
                     ps.setString(1, professional.getName());
@@ -79,7 +79,7 @@ public class ProfessionalDatabase implements ProfessionalRepository {
         jdbcTemplate.update(connection -> {
 
             PreparedStatement ps = connection.prepareStatement(
-                    "UPDATE Professional SET name=? , firstname=?, phone=?, email=?, job=?, address=? " +
+                    "UPDATE Professional SET name=? , firstname=?, phone=?, email=?, profession=?, address=? " +
                             "WHERE id=?");
             ps.setString(1, professional.getName());
             ps.setString(2, professional.getFirstname());
@@ -106,10 +106,10 @@ public class ProfessionalDatabase implements ProfessionalRepository {
     public List<Professional> sort(ParamChoice.professionalSortChoice choice, String  name , ParamChoice.professionalJobs profession, String id) {
 
         return jdbcTemplate.query("SELECT * FROM professional " +
-                        "WHERE name LIKE '%"+ name +"%' AND id LIKE '"+ id + "' AND job LIKE '" + profession.toString() +
+                        "WHERE name LIKE '%"+ name +"%' AND id LIKE '"+ id + "' AND profession LIKE '" + profession.toString() +
                         "' ORDER BY " + choice ,
                 (rs, rowNum) -> new Professional(rs.getLong("id"),
                         rs.getString("name"), rs.getString("firstname"), rs.getString("email"),
-                        rs.getString("phone"), rs.getString("address"), rs.getString("job")));
+                        rs.getString("phone"), rs.getString("address"), rs.getString("profession")));
     }
 }
