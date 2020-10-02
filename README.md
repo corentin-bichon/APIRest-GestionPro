@@ -37,18 +37,3 @@ CREATE table professional (
 ) ENGINE=InnoDB;
 
  </h6>
- 
- <h6>
-USE DBProfessionnel;
-DROP TABLE IF EXISTS patient;
-
-CREATE table patient (
-id BIGINT NOT NULL AUTO_INCREMENT,
-name VARCHAR(50) NOT NULL, 
-firstname VARCHAR(50) NOT NULL,
-email VARCHAR(50) ,
-address VARCHAR(50), 
-phone VARCHAR(10), 
-PRIMARY KEY(id) )
-ENGINE=InnoDB; 
-  </h6>
