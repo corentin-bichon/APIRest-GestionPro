@@ -32,7 +32,7 @@ public class ProPatController {
 
 
 
-    @PutMapping("/relation/{id}")
+    @PutMapping("/relation/{rNum}")
     public ProPat updatePro(@PathVariable Long rNum, @RequestBody ProPat relation){
         return repository.updateRelation(relation, rNum);
     }

@@ -56,12 +56,12 @@ public class ProPatDatabase {
         jdbcTemplate.update(connection -> {
 
             PreparedStatement ps = connection.prepareStatement(
-                    "UPDATE propat SET pat_id=? pro_id=? sickness=? " +
+                    "UPDATE propat SET pat_id=? , pro_id=? , sickness=? " +
                             "WHERE rNum=?");
             ps.setLong(1, relation.getPat_id());
             ps.setLong(2, relation.getPro_id());
-            ps.setString(1, relation.getSickness());
-            ps.setLong(7,rNum);
+            ps.setString(3, relation.getSickness());
+            ps.setLong(4,rNum);
             return ps;
         } );
 
