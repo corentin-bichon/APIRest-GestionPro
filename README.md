@@ -60,9 +60,11 @@ USE DBProfessional;
 DROP TABLE IF EXISTS propat;
 
 CREATE table propat (
+rNum BIGINT NOT NULL AUTO_INCREMENT,
 pat_id BIGINT NOT NULL,
 pro_id BIGINT NOT NULL,
 sickness VARCHAR(50), 
+PRIMARY KEY(rNum),
 FOREIGN KEY (pat_id) REFERENCES patient (id),
 FOREIGN KEY (pro_id) REFERENCES professional (id))
 ENGINE=InnoDB;
