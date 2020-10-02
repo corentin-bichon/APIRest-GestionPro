@@ -3,7 +3,7 @@ package com.Project.MoveInMed.GestionPro.controller;
 
 import com.Project.MoveInMed.GestionPro.enumClass.ParamChoice;
 import com.Project.MoveInMed.GestionPro.entity.Professional;
-import com.Project.MoveInMed.GestionPro.repository.ProfessionalRepository;
+import com.Project.MoveInMed.GestionPro.repository.database.ProfessionalDatabase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +17,7 @@ import java.util.List;
 public class ProfessionalController {
 
 	@Autowired
-	private ProfessionalRepository repository;
+	private ProfessionalDatabase repository;
 
 	/**
 	 * Create an account for the professional

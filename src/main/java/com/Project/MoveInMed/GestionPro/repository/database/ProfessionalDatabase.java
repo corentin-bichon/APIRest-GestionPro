@@ -2,7 +2,6 @@ package com.Project.MoveInMed.GestionPro.repository.database;
 
 import com.Project.MoveInMed.GestionPro.enumClass.ParamChoice;
 import com.Project.MoveInMed.GestionPro.entity.Professional;
-import com.Project.MoveInMed.GestionPro.repository.ProfessionalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -17,7 +16,7 @@ import java.util.List;
  * Class that updates the database's information according to a parameter passed in the controller
  */
 @Repository
-public class ProfessionalDatabase implements ProfessionalRepository {
+public class ProfessionalDatabase {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -27,7 +26,6 @@ public class ProfessionalDatabase implements ProfessionalRepository {
      * @param professional professional's information
      * @return the information of the new professional's account
      */
-    @Override
     public Professional create(Professional professional) {
 
         KeyHolder kh=new GeneratedKeyHolder();
@@ -56,7 +54,6 @@ public class ProfessionalDatabase implements ProfessionalRepository {
      * Function used by DeleteById for Delete professional's information using his ID
      * @param id Unique number of a professional
      */
-    @Override
     public void delete(Long id) {
 
         jdbcTemplate.update(connection -> {
@@ -73,7 +70,6 @@ public class ProfessionalDatabase implements ProfessionalRepository {
      * @param professional information to change
      * @return the new information of the professional
      */
-    @Override
     public Professional update(Professional professional, Long id) {
 
         jdbcTemplate.update(connection -> {
@@ -102,7 +98,6 @@ public class ProfessionalDatabase implements ProfessionalRepository {
      * @param id select the professional whose id is passed in parameter
      * @return the list of the professionals found
      */
-    @Override
     public List<Professional> sort(ParamChoice.professionalSortChoice choice, String  name , ParamChoice.professionalJobs profession, String id) {
 
         return jdbcTemplate.query("SELECT * FROM professional " +

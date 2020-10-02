@@ -1,6 +1,6 @@
 # APIRest-GestionPro
 <p>
-Api Rest with SpringBoot for manage professional information
+Api Rest with SpringBoot for manage professional's information
 
 
 For use swagger : http://localhost:8080/swagger-ui.html
@@ -14,14 +14,14 @@ For use swagger : http://localhost:8080/swagger-ui.html
 Generate DataBase
 </h5>
 <h6>
-CREATE DATABASE `DBProfessionnel` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE `DBProfessional` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 </h6>
 
 <h5>
 Create Table and Insert default values
 </h5>
 <h6>
-USE DBProfessionnel;
+USE DBProfessional;
 
 DROP TABLE IF EXISTS professional;
 
@@ -36,9 +36,35 @@ CREATE table professional (
   PRIMARY KEY(id)
 ) ENGINE=InnoDB;
 
-INSERT INTO professional (name,firstname) VALUES
-  ('John','RACHID'),
-  ('Mike','TYSON'),
-  ('Benny','BERTRAND');
-  
  </h6>
+
+<h6>
+USE DBProfessional;
+DROP TABLE IF EXISTS patient;
+
+CREATE table patient (
+id BIGINT NOT NULL AUTO_INCREMENT,
+name VARCHAR(50) NOT NULL, 
+firstname VARCHAR(50) NOT NULL,
+email VARCHAR(50) ,
+address VARCHAR(50), 
+phone VARCHAR(10), 
+PRIMARY KEY(id) )
+ENGINE=InnoDB;
+</h6>
+
+
+<h6>
+
+USE DBProfessional;
+DROP TABLE IF EXISTS pro_pat;
+
+CREATE table pro_pat (
+pat_id BIGINT NOT NULL,
+pro_id BIGINT NOT NULL,
+sickness VARCHAR(50), 
+FOREIGN KEY (pat_id) REFERENCES patient (id),
+FOREIGN KEY (pro_id) REFERENCES professional (id))
+ENGINE=InnoDB;
+
+</h6>

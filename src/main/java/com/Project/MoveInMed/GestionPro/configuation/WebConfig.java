@@ -1,4 +1,4 @@
-package com.Project.MoveInMed.GestionPro;
+package com.Project.MoveInMed.GestionPro.configuation;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.*;
