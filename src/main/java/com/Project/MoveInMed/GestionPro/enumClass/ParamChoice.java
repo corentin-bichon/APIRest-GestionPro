@@ -35,4 +35,11 @@ public class ParamChoice {
         return this.value;
     }
 }
+
+
+    public enum patientSortChoice {
+        id,
+        name,
+        firstname,
+    }
 }

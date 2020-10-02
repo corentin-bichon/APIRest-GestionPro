@@ -35,7 +35,7 @@ public class ProfessionalController {
 	 * @param id Unique number of a professional
 	 */
 	@DeleteMapping("/professionals/{id}")
-	public void deleteById(@PathVariable Long id){
+	public void deleteProById(@PathVariable Long id){
 		repository.delete(id);
 	}
 
@@ -47,7 +47,7 @@ public class ProfessionalController {
 	 * @return the new information of the professional
 	 */
 	@PutMapping("/professionals/{id}")
-	public Professional update(@PathVariable Long id, @RequestBody Professional professional){
+	public Professional updatePro(@PathVariable Long id, @RequestBody Professional professional){
 		return repository.update(professional, id);
 	}
 
@@ -61,10 +61,10 @@ public class ProfessionalController {
 	 * @return the list of the professionals found
 	 */
 	@GetMapping("/professionals")
-	public List<Professional> sortBy(@RequestParam(defaultValue = "id") ParamChoice.professionalSortChoice choice,
-									 @RequestParam(defaultValue = "%") String name,
-									 @RequestParam(defaultValue = "Percent" ) ParamChoice.professionalJobs profession,
-									 @RequestParam(defaultValue = "%")  String id  ){
+	public List<Professional> sortProBy(@RequestParam(defaultValue = "id") ParamChoice.professionalSortChoice choice,
+										@RequestParam(defaultValue = "%") String name,
+										@RequestParam(defaultValue = "Percent" ) ParamChoice.professionalJobs profession,
+										@RequestParam(defaultValue = "%")  String id  ){
 
 
 		return repository.sort(choice,name,profession,id);

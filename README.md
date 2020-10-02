@@ -57,9 +57,9 @@ ENGINE=InnoDB;
 <h6>
 
 USE DBProfessional;
-DROP TABLE IF EXISTS pro_pat;
+DROP TABLE IF EXISTS propat;
 
-CREATE table pro_pat (
+CREATE table propat (
 pat_id BIGINT NOT NULL,
 pro_id BIGINT NOT NULL,
 sickness VARCHAR(50), 
@@ -67,4 +67,5 @@ FOREIGN KEY (pat_id) REFERENCES patient (id),
 FOREIGN KEY (pro_id) REFERENCES professional (id))
 ENGINE=InnoDB;
 
+</h6>
 </h6>
