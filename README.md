@@ -13,14 +13,18 @@ For use swagger : http://localhost:8080/swagger-ui.html
 <h5>
 Generate DataBase
 </h5>
-<h6>
+
+```
+
 CREATE DATABASE `DBProfessional` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-</h6>
+
+```
 
 <h5>
-Create Table and Insert default values
+Create Table professional
 </h5>
-<h6>
+
+```
 USE DBProfessional;
 
 DROP TABLE IF EXISTS professional;
@@ -36,9 +40,14 @@ CREATE table professional (
   PRIMARY KEY(id)
 ) ENGINE=InnoDB;
 
- </h6>
+```
 
-<h6>
+<h5>
+Create Table patient
+</h5>
+
+```
+
 USE DBProfessional;
 DROP TABLE IF EXISTS patient;
 
@@ -51,10 +60,14 @@ address VARCHAR(50),
 phone VARCHAR(10), 
 PRIMARY KEY(id) )
 ENGINE=InnoDB;
-</h6>
 
+```
 
-<h6>
+<h5>
+Create Table propat
+</h5>
+
+```
 
 USE DBProfessional;
 DROP TABLE IF EXISTS propat;
@@ -69,5 +82,4 @@ FOREIGN KEY (pat_id) REFERENCES patient (id),
 FOREIGN KEY (pro_id) REFERENCES professional (id))
 ENGINE=InnoDB;
 
-</h6>
-</h6>
+```
