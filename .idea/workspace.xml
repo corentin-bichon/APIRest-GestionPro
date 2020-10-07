@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d169e9e5-1208-4a7b-851c-16778b1b6cda" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Project/MoveInMed/GestionPro/controller/ProPatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Project/MoveInMed/GestionPro/controller/ProPatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Project/MoveInMed/GestionPro/entity/ProPat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Project/MoveInMed/GestionPro/entity/ProPat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Project/MoveInMed/GestionPro/enumClass/ParamChoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Project/MoveInMed/GestionPro/enumClass/ParamChoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Project/MoveInMed/GestionPro/repository/database/ProPatDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Project/MoveInMed/GestionPro/repository/database/ProPatDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Project/MoveInMed/GestionPro/controller/ProPatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Project/MoveInMed/GestionPro/controller/ProPatController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Project/MoveInMed/GestionPro/entity/ProPat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Project/MoveInMed/GestionPro/entity/ProPat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Project/MoveInMed/GestionPro/repository/database/ProPatDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Project/MoveInMed/GestionPro/repository/database/ProPatDatabase.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +78,7 @@
       <workItem from="1601622479459" duration="12808000" />
       <workItem from="1601881663752" duration="5228000" />
       <workItem from="1601968603084" duration="1259000" />
-      <workItem from="1602054387135" duration="1622000" />
+      <workItem from="1602054387135" duration="2474000" />
     </task>
     <task id="LOCAL-00001" summary="entity patient create">
       <created>1601642870600</created>
@@ -122,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601653924488</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update deleteRelation with rNum, pat_id and pro_id in parameters">
+      <created>1602059849946</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602059849946</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,7 +134,8 @@
     <MESSAGE value="patient ProPat, work but don't have catch error" />
     <MESSAGE value="get post put and delete work on patient ProPat, work but don't have catch error" />
     <MESSAGE value="update readme for generate database" />
-    <option name="LAST_COMMIT_MESSAGE" value="update readme for generate database" />
+    <MESSAGE value="update deleteRelation with rNum, pat_id and pro_id in parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="update deleteRelation with rNum, pat_id and pro_id in parameters" />
   </component>
   <component name="WindowStateProjectService">
     <state x="312" y="246" key="#Template_Data_Languages" timestamp="1601646411021">
@@ -153,46 +154,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1601458127939" />
-    <state x="262" y="0" key="CommitChangelistDialog2" timestamp="1601653923900">
+    <state x="262" y="0" key="CommitChangelistDialog2" timestamp="1602059849071">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="262" y="0" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1601653923900" />
+    <state x="262" y="0" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059849071" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1601536240569">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1601536240569" />
-    <state width="1493" height="206" key="GridCell.Tab.0.bottom" timestamp="1602059586924">
+    <state width="1493" height="206" key="GridCell.Tab.0.bottom" timestamp="1602059695852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="206" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059586924" />
-    <state width="1493" height="206" key="GridCell.Tab.0.center" timestamp="1602059586924">
+    <state width="1493" height="206" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059695852" />
+    <state width="1493" height="206" key="GridCell.Tab.0.center" timestamp="1602059695852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="206" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059586924" />
-    <state width="1493" height="206" key="GridCell.Tab.0.left" timestamp="1602059586924">
+    <state width="1493" height="206" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059695852" />
+    <state width="1493" height="206" key="GridCell.Tab.0.left" timestamp="1602059695852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="206" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059586924" />
-    <state width="1493" height="206" key="GridCell.Tab.0.right" timestamp="1602059586924">
+    <state width="1493" height="206" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059695852" />
+    <state width="1493" height="206" key="GridCell.Tab.0.right" timestamp="1602059695852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="206" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059586924" />
-    <state width="1493" height="206" key="GridCell.Tab.1.bottom" timestamp="1602059586924">
+    <state width="1493" height="206" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059695852" />
+    <state width="1493" height="206" key="GridCell.Tab.1.bottom" timestamp="1602059695852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="206" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059586924" />
-    <state width="1493" height="206" key="GridCell.Tab.1.center" timestamp="1602059586924">
+    <state width="1493" height="206" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059695852" />
+    <state width="1493" height="206" key="GridCell.Tab.1.center" timestamp="1602059695852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="206" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059586924" />
-    <state width="1493" height="206" key="GridCell.Tab.1.left" timestamp="1602059586924">
+    <state width="1493" height="206" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059695852" />
+    <state width="1493" height="206" key="GridCell.Tab.1.left" timestamp="1602059695852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="206" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059586924" />
-    <state width="1493" height="206" key="GridCell.Tab.1.right" timestamp="1602059586924">
+    <state width="1493" height="206" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059695852" />
+    <state width="1493" height="206" key="GridCell.Tab.1.right" timestamp="1602059695852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="206" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059586924" />
+    <state width="1493" height="206" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602059695852" />
     <state x="277" y="0" key="SettingsEditor" timestamp="1601394917607">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
