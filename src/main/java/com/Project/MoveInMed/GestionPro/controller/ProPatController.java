@@ -12,7 +12,7 @@ import java.util.List;
  * Class responsible to Manage the flow of the Application
  */
 @RestController
-@RequestMapping("/api3")
+@RequestMapping("/api")
 public class ProPatController {
 
     @Autowired
@@ -25,9 +25,13 @@ public class ProPatController {
     }
 
 
-    @DeleteMapping("/relation/{rNum}")
-    public void deleteByrNum(@PathVariable Long rNum){
-        repository.deleteRelation(rNum);
+    @DeleteMapping("/relation")
+    public void deleteByRelation(@RequestParam(defaultValue = "%") String rNum,
+                             @RequestParam(defaultValue = "%") String pat_id,
+                             @RequestParam(defaultValue = "%" ) String pro_id){
+
+
+        repository.deleteRelation(rNum,pat_id,pro_id);
     }
 
 
@@ -42,7 +46,7 @@ public class ProPatController {
     public List<ProPat> sortProBy(@RequestParam(defaultValue = "%") String rNum,
                                         @RequestParam(defaultValue = "%") String pat_id,
                                         @RequestParam(defaultValue = "%" ) String pro_id,
-                                        @RequestParam(defaultValue = "%")  String sickness  ){
+                                        @RequestParam(defaultValue = "%")  String sickness){
 
 
         return repository.sortRelation(rNum, pat_id, pro_id, sickness);
